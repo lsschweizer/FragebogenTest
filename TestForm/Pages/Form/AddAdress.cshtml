@@ -1,0 +1,54 @@
+﻿@page
+@model TestForm.Pages.Form.AddAdressModel
+@{
+    ViewData["Title"] = "AddAdress";
+}
+<html>
+<head>
+             
+</head>
+
+<body>
+
+    <h1>Persönliche Daten</h1>
+
+    <form method="post">
+        <input type="text" asp-for="Adress.Vorname" placeholder="Vorname" />
+        <input type="text" asp-for="Adress.Nachname" placeholder="Nachname" />
+        <input type="text" asp-for="Adress.Geburtsdatum" placeholder="Geburtsdatum" />
+        <label>Geschlecht:</label>
+        <select id="Geschlecht" asp-for="Adress.Geschlecht" placeholder="Geschlecht">
+            <option value="männlich">männlich</option>
+            <option value="weiblich">weiblich </option>
+        </select>
+        <input type="text" asp-for="Adress.EMail" placeholder="E-Mail" />
+        <input type="text" asp-for="Adress.Telefonnummer" placeholder="Telefonnummer" />
+        <input type="text" asp-for="Adress.Größe" placeholder="Größe" />
+        <input type="text" asp-for="Adress.Gewicht" placeholder="Gewicht" />    
+        <input type="text" asp-for="Adress.Straße" placeholder="Straße" />
+        <input type="text" asp-for="Adress.PLZ" placeholder="PLZ" />
+        <input type="text" asp-for="Adress.Ort" placeholder="Ort" />
+        <input type="text" asp-for="Adress.Bundesland" placeholder="Bundesland" />
+        <input type="text" asp-for="Adress.Land" placeholder="Land" />
+
+
+        <h1>Account Daten</h1>
+
+
+        <label>Strava:</label>
+        <select id="Strava" asp-for="Adress.Strava" placeholder="Hast du einen Strava Account?">
+            <option value="Ja">Ja</option>
+            <option value="Nein">Nein </option>
+        </select>
+        <label>Trainingpeaks:</label>
+        <select id="Trainingpeaks" asp-for="Adress.Trainingpeaks" placeholder="Hast du einen Trainingpeaks Account?">
+            <option value="Ja">Ja</option>
+            <option value="Nein">Nein </option>
+        </select>
+        <input type="text" asp-for="Adress.StravaName" placeholder="Strava Name" />
+
+        <button type="submit">Absenden</button>
+
+    </form>
+</body>
+</html>
